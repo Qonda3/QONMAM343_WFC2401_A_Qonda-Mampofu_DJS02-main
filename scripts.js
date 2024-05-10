@@ -28,14 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
       displayError("Result is not a whole number.");
     }
 
-    function divideNumbers(dividend, divider) {
-      return dividend / divider;
-    }
-
-    function displayResult(result) {
-      resultMessage.textContent = result;
-    }
-
   }
 
   function getNumberInputValue(inputName) {
