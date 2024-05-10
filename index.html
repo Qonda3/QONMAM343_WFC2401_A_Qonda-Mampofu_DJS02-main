@@ -11,18 +11,18 @@
   
   <body>
     <h1>Whole Number Division</h1>
-    <form data-form="data-form">
+    <form id="divisionForm">
       <label
         ><span>Dividend</span>
-        <input name="dividend" />
+        <input type="number" name="dividend" required />
       </label>
       <label>
         <span>Divider</span>
-        <input name="divider" />
+        <input type="number" name="divider" required />
       </label>
       <button type="submit">Calculate</button>
     </form>
     <hr />
-    <div data-result="data-result">No calculation performed</div>
+    <div id="resultMessage">No calculation performed</div>
   </body>
 </html>
