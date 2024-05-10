@@ -15,8 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    const divisionResult = divideNumbers(dividend, divider);
+    if (divider === 0) {
+      displayError("Division by zero is not allowed.");
+      return;
+    }
 
+    const divisionResult = divideNumbers(dividend, divider);
+    
     if (Number.isInteger(divisionResult)) {
       displayResult(divisionResult);
     }else {
