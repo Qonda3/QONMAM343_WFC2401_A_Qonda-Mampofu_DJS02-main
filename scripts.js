@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const divisionResult = divideNumbers(dividend, divider);
-    
+
     if (Number.isInteger(divisionResult)) {
       displayResult(divisionResult);
     }else {
@@ -41,6 +41,14 @@ document.addEventListener("DOMContentLoaded", () => {
   function getNumberInputValue(inputName) {
     const input = document.querySelector(`input[name="${inputName}"]`);
     return parseFloat(input.value);
+  }
+
+  function divideNumbers(dividend, divider) {
+    return dividend / divider;
+  }
+
+  function displayResult(result) {
+    resultMessage.textContent = result;
   }
 
   function displayError(message) {
