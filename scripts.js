@@ -17,5 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   }
 
+  function getNumberInputValue(inputName) {
+    const input = document.querySelector(`input[name="${inputName}"]`);
+    return parseFloat(input.value);
+  }
+
+  function displayError(message) {
+    resultMessage.textContent = message;
+  }
 
 });
