@@ -5,6 +5,10 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   const entries = new FormData(event.target);
   const { dividend, divider } = Object.fromEntries(entries);
-  const wholeNumber = Math.trunc(dividend / divider);
-  result.innerText = wholeNumber;
+  let outputValue = Math.trunc(dividend / divider);
+
+  if (!dividend || !divider){
+    outputValue = "Division not performed. Both values are required in inputs. Try again"
+  }
+  result.innerText = outputValue;
 });
